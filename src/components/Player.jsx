@@ -5,7 +5,7 @@ export default function Player({ initialName, symbol, isActive, onChangeName }) 
     const [playerName, setPlayerName] = useState(initialName);
 
     function handleEditClick() {
-        setIsEditing((editing) => !editing); //if your new state depends on your previous state value, you should pass a function to your state updating function
+        setIsEditing((editing) => !editing); //if your new state depends on your previous state value, you should pass a function to your state updating functions
         if (isEditing) {
             onChangeName(symbol, playerName);
         }
